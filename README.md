@@ -5,6 +5,7 @@ To train bot run:
 ```
 Run custom actions by:
 ```shell
+   cd actions
    rasa run actions
 ```
 Test bot in shell:
