@@ -1,0 +1,44 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Ask for point when not set
+  condition:
+    - slot_was_set:
+        - POINT: null
+  steps:
+    - action: utter_greet
+  wait_for_user_input: false
+
+- rule: Ask for equipment when not set
+  condition:
+    - slot_was_set:
+        - POINT
+        - EQUIPMENT: null
+  steps:
+    - action: utter_equip
+  wait_for_user_input: false
+
+- rule: If ask reset, reset
+  steps:
+    - intent: reset
+    - action: action_restart
+
+- rule: Only get next afer knowing equip and point
+  condition:
+    - slot_was_set:
+        - POINT
+        - EQUIPMENT
+  steps:
+      - intent: next
+      - action: action_get_exercise
+
+- rule: Say hi anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet

@@ -1,0 +1,84 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Good day
+    - Greetings
+    - Hey
+
+- intent: get_point
+  examples: |
+    - start with [Chest](POINT:Chest)
+    - I wish to do [traps](POINT:Traps)
+    - I wish to train [traps](POINT:Traps)
+    - let's train [abs](POINT:Abdominals)
+    - let's do [abdominals](POINT:Abdominals)
+    - wanna try [Calves](POINT:Calves)
+    - today [Forearms](POINT:Forearms)
+    - let's try [abs](POINT:Abdominals)
+    - I think [Middle Back](POINT:Middle Back)
+    - I need to train [arms](POINT:Biceps,Triceps,Shoulders,Forearms)
+    - [legs](POINT:Calves,Quadriceps,Hamstrings,Abductors)
+    - Let's try [back](POINT:Middle Back,Lats,Lower Back, Traps)
+    - go with [lower back](POINT:Lower Back)
+    - [Biceps](POINT:Biceps)
+    - [Lats](POINT:Lats)
+    - [Quadriceps](POINT:Quadriceps)
+    - [abs](POINT:Abdominals)
+    - [Hamstrings](POINT:Hamstrings)
+    - [Shoulders](POINT:Shoulders)
+    - [Traps](POINT:Traps)
+    - [Triceps](POINT:Triceps)
+    - [Abductors](POINT:Abductors)
+
+- intent: get_eqip
+  examples: |
+    - with [Cable](EQUIPMENT:Cable)
+    - I chose [Dumbbells](EQUIPMENT:Dumbbell)
+    - [dumbels](EQUIPMENT:Dumbbell)
+    - [dumbell](EQUIPMENT:Dumbbell)
+    - [dumbbel](EQUIPMENT:Dumbbell)
+    - I have [Bands](EQUIPMENT:Bands)
+    - [none](EQUIPMENT:None)
+    - Just [anything](EQUIPMENT:All)
+    - [nothing](EQUIPMENT:None)
+    - [Barbell](EQUIPMENT:Barbell)
+    - [Gym machine](EQUIPMENT:Machine)
+    - [Kettlebells](EQUIPMENT:Kettlebells)
+    - [Exercise Ball](EQUIPMENT:Exercise Ball)
+    - [Medicine Ball](EQUIPMENT:Medicine Ball)
+    - [anything](EQUIPMENT:All) will do
+    - [Foam Roll](EQUIPMENT:Foam Roll)
+    - [E-Z Curl Bar](EQUIPMENT:E-Z Curl Bar)
+    - [Curl Bar](EQUIPMENT:E-Z Curl Bar)
+
+- intent: next
+  examples: |
+    - another
+    - next
+    - give me another
+    - I already know this one, give me another
+    - Let's get next
+
+- intent: reset
+  examples: |
+    - reset
+    - full reset
+    - let's do all over again
+    - let's start from scratch
+    - restart
+
+
+- intent: goodbye
+  examples: |
+    - bye
+    - godbye
+    - disconect
+    - end
+    - finish
+
+
+

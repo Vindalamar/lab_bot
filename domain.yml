@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - get_point
+  - get_eqip
+  - next
+  - reset
+
+entities:
+  - POINT
+  - EQUIPMENT
+
+slots:
+  POINT:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: POINT
+
+  EQUIPMENT:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: EQUIPMENT
+
+
+actions:
+  - action_get_exercise
+
+responses:
+  utter_greet:
+    - text: "Hi, let's begin. What Body Part do you want to train?"
+
+  utter_equip:
+    - text: "What equipment do you want to use?"
+
+  utter_goodbye:
+    - text: "Goodbye! Rest well"
+
+  utter_restart:
+    - text: "Ok. What Body Part do you want to train?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,20 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - action: utter_greet
+  - intent: get_point
+  - slot_was_set:
+      - POINT
+  - action: utter_equip
+  - intent: get_eqip
+  - slot_was_set:
+      - EQUIPMENT
+  - action: action_get_exercise
+  - intent: next
+  - action: action_get_exercise
+
+
+
